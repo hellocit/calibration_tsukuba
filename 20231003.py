@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import cv2
 import numpy as np
 
@@ -29,6 +30,6 @@ class Correction():
         return dst
 
 if __name__ ==  "__main__":
-    corr = Correction("mtx.csv", "dist.csv", formatType="csv")
-    img = corr(cv2.imread("IMG_1920.jpg"))
-    cv2.imwrite( "20231003.jpg", img)
+    corr = Correction("img_20231005T184557_mtx.csv", "img_20231005T184557_dist.csv", formatType="csv")
+    img = corr(cv2.imread("img_20231005T184557.jpg"))
+    cv2.imwrite( "img_20231005T184557.jpg", img)

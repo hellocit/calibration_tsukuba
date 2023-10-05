@@ -88,8 +88,8 @@ class Calbration():
 
         if(len(imgPoints) > 0):
             ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objPoints, imgPoints, self.imageSize, None, None)
-            np.savetxt("mtx.csv", mtx, delimiter=",", fmt="%0.14f") # カメラ行列
-            np.savetxt("dist.csv", dist, delimiter=",", fmt="%0.14f") # 歪みパラメータ
+            np.savetxt("img_20231005T184557_mtx.csv", mtx, delimiter=",", fmt="%0.14f") # カメラ行列
+            np.savetxt("img_20231005T184557_dist.csv", dist, delimiter=",", fmt="%0.14f") # 歪みパラメータ
             # 計算結果を表示
             print("RMS:", ret)
             print("mtx:", mtx)
